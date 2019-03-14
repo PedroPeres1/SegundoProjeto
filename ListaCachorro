@@ -32,7 +32,7 @@ public class ListaCachorro extends HttpServlet {
 		response.getWriter().println("<html>");
 		
 		response.getWriter().println("<head>");
-		response.getWriter().println("<h1><title>Lista dos Cachorros</title></h1>");
+		response.getWriter().println("<h1>Lista dos Cachorros</h1>");
 		response.getWriter().println("</head>");
 			 
 		response.getWriter().println("<body>");
