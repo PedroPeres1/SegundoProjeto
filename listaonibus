@@ -1,38 +1,35 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
 @WebServlet("/listacachorro")
-public class listacachorro extends HttpServlet {
+public class listaonibus extends HttpServlet {
 
+	
+    /**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
-
-    public listacachorro() {
+	public listaonibus() {
         super();
         // TODO Auto-generated constructor stub
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		List<Cachorro> listaC=new ArrayList<>();
-		listaC.add(new Cachorro("Nick", 4));
-		listaC.add(new Cachorro("Mel", 7));
-		listaC.add(new Cachorro("Fred", 9));
+		List<Onibus> listaO=new ArrayList<>();
+		listaO.add(new Onibus("TCB", 15));
+		listaO.add(new Onibus("São Jose", 25));
+		listaO.add(new Onibus("Viação Marechal", 18));
 		
-		response.getWriter()
-		.append(listaC.toString())
-		.append("Served at GET: ")
-		.append(request.getContextPath());
-	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		response.getWriter().append(listaO.toString());
+	
+}}
 
-}
